@@ -28,7 +28,7 @@ jobs:
         python -m pip install exifread pyinstaller
     - name: build with pyinstaller
       run: |
-        pyinstaller exif-test.py --distpath fxg1337/EXIF_reader/
+        pyinstaller exif-test.py --distpath .github
 
       
        
