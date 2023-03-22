@@ -28,7 +28,7 @@ jobs:
         python -m pip install exifread pyinstaller
     - name: build with pyinstaller
       run: |
-        pyinstaller exif-test.spec
+        pyinstaller --onefile exif-test.spec /EXIF_reader
 
       
        
