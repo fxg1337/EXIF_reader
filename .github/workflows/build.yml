@@ -20,3 +20,4 @@ steps:
     pip install exifread
 - name: build with pyinstaller
   run: |
+    pyinstaller exif-test.py
