@@ -28,6 +28,6 @@ jobs:
         python -m pip install exifread pyinstaller
     - name: build with pyinstaller
       run: |
-       python -m pyinstaller exif-test.py
+        pyinstaller exif-test.py
       
        
