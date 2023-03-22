@@ -1,32 +1,22 @@
-name: Package Application with Pyinstaller
+name: PyInstaller
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push]
 
 jobs:
-  build:
+build:
 
-    runs-on: windows-latest
+runs-on: windows-latest
 
-    steps:
-    - uses: actions/checkout@v2
-    
-    - name: Install dependencies
-    
-      run: |
-        python -m pip install --upgrade pip
-        python -m pip install flake8 pytest
-        python -m pip install -r requirements.txt
-
-    - name: Package Application
-      uses: JackMcKew/pyinstaller-action-windows@main
-      with:
-        path: fxg1337/XIF_reader@main
-
-    - uses: actions/upload-artifact@v2
-      with:
-        name: name-of-artifact
-        path: XIF_reader/
+steps:
+- uses: actions/checkout@v1
+- name: Set up Python 3.8
+  uses: actions/setup-python@v1
+  with:
+    python-version: 3.11
+- name: Install dependencies
+  run: |
+    python -m pip install --upgrade pip
+    pip install pyinstaller
+    pip install exifread
+- name: build with pyinstaller
+  run: |
