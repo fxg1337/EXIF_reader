@@ -28,7 +28,7 @@ jobs:
         python -m pip install exifread pyinstaller
     - name: build with pyinstaller
       run: |
-        pyinstaller --onefile exif-test.py
+        pyinstaller --onefile exif-test.py --distpath .github/workflows/
 
       
        
