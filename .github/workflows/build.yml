@@ -24,7 +24,7 @@ jobs:
     - name: Package Application
       uses: JackMcKew/pyinstaller-action-windows@main
       with:
-        path: XIF_reader/exif-test.py
+        path: fxg1337/XIF_reader@main
 
     - uses: actions/upload-artifact@v2
       with:
