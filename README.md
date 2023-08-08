@@ -1,2 +1,2 @@
 # EXIF_reader
-Read EXIF data output to text file 
+Read EXIF data form image output to text file 
